@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kgutlane Ralijeje - Developer CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for the minimal brown, grey, black scheme */
+        .bg-primary-dark { background-color: #1a1a1a; } /* Near black */
+        .bg-primary-light { background-color: #2c2c2c; } /* Dark grey */
+        .text-accent { color: #a0522d; } /* Sienna/Brown */
+        .bg-accent { background-color: #a0522d; } /* Sienna/Brown */
+        .hover-bg-accent-dark { background-color: #8b4513; } /* Darker Sienna */
+        .border-accent { border-color: #a0522d; }
+        .text-neutral-light { color: #e0e0e0; } /* Light grey for text */
+        .text-neutral-dark { color: #333333; } /* Dark grey for text */
+        .bg-section-light { background-color: #f5f5f5; } /* Very light grey */
+        .bg-section-dark { background-color: #252525; } /* Darker background for sections */
+
+        /* General transitions for hover effects */
+        .transition-colors { transition-property: background-color, border-color, color; transition-duration: 300ms; }
+        .transition-transform { transition-property: transform; transition-duration: 300ms; }
+        .shadow-custom { box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); }
+        .shadow-custom-hover:hover { box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1); }
+
+        /* Typing animation */
+        .typing-animation {
+            border-right: 2px solid #a0522d; /* Accent color for caret */
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #a0522d } /* Accent color */
+        }
+
+        /* Fade-in animation for sections */
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Ensure smooth scrolling */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-section-light text-neutral-dark font-sans">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-primary-dark shadow-lg z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-neutral-light">
+                    Kgutlane Ralijeje
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-neutral-light hover:text-accent transition-colors">Home</a>
+                    <a href="#summary" class="text-neutral-light hover:text-accent transition-colors">Summary</a>
+                    <a href="#skills" class="text-neutral-light hover:text-accent transition-colors">Skills</a>
+                    <a href="#experience" class="text-neutral-light hover:text-accent transition-colors">Experience</a>
+                    <a href="#projects" class="text-neutral-light hover:text-accent transition-colors">Projects</a>
+                    <a href="#education" class="text-neutral-light hover:text-accent transition-colors">Education</a>
+                    <a href="#accomplishments" class="text-neutral-light hover:text-accent transition-colors">Accomplishments</a>
+                    <a href="#contact" class="text-neutral-light hover:text-accent transition-colors">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-neutral-light">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-primary-dark shadow-lg hidden">
+            <div class="px-6 py-4 space-y-4">
+                <a href="#home" class="block text-neutral-light hover:text-accent">Home</a>
+                <a href="#summary" class="block text-neutral-light hover:text-accent">Summary</a>
+                <a href="#skills" class="block text-neutral-light hover:text-accent">Skills</a>
+                <a href="#experience" class="block text-neutral-light hover:text-accent">Experience</a>
+                <a href="#projects" class="block text-neutral-light hover:text-accent">Projects</a>
+                <a href="#education" class="block text-neutral-light hover:text-accent">Education</a>
+                <a href="#accomplishments" class="block text-neutral-light hover:text-accent">Accomplishments</a>
+                <a href="#contact" class="block text-neutral-light hover:text-accent">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen bg-primary-dark flex items-center justify-center text-neutral-light">
+        <div class="container mx-auto px-6 text-center py-20">
+            <div class="animate-fade-in">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                    Hi, I'm <span class="text-accent">Kgutlane</span>
+                </h1>
+                <div class="text-2xl md:text-3xl mb-8 h-10 overflow-hidden">
+                    <span id="typing-text" class="typing-animation whitespace-nowrap inline-block">Junior Software Developer</span>
+                </div>
+                <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+                    Motivated Junior Software Developer with a successful track record in technical support, seeking to leverage a strong foundation in Python, JavaScript, and web development.
+                </p>
+                <a href="#summary" class="bg-accent text-neutral-light px-8 py-3 rounded-full font-semibold hover-bg-accent-dark transition-colors inline-block shadow-custom">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Summary Section -->
+    <section id="summary" class="py-20 bg-section-light">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-primary-dark mb-4">About Me</h2>
+                <div class="w-24 h-1 bg-accent mx-auto"></div>
+            </div>
+            <div class="max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed">
+                <p class="mb-4">
+                    As a motivated Junior Software Developer, I bring a successful track record in technical support, eager to leverage a strong foundation in Python, JavaScript, and web development gained from a rigorous software engineering bootcamp.
+                </p>
+                <p>
+                    I am passionate about applying diverse problem-solving and technical skills to contribute effectively to dynamic software development projects, with a keen interest in full-stack solutions and robust system architecture.
+                </p>
+            </div>
+        </div>
+    </section>
+
+<!-- Profile Picture Section -->
+<section id="profile-picture" class="py-8 bg-section-light">
+    <div class="container mx-auto px-6 flex flex-col items-center">
+        <div class="bg-white rounded-full shadow-custom p-2 mb-4">
+            <img id="profile-img" src="/Users/kgutlanebuntle/Desktop/Coding/HyperionDev/HP_Code/Level_3/IMG_9473.JPG" alt="Profile Picture"
+                 class="w-40 h-40 rounded-full object-cover border-4 border-accent">
+        </div>
+    </div>
+</section>
+
+ <!-- Skills Section -->
+<section id="skills" class="py-20 bg-primary-dark text-neutral-light">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-neutral-light mb-4">My Skills</h2>
+            <div class="w-24 h-1 bg-accent mx-auto"></div>
+        </div>
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+            <!-- Technical Skills Card -->
+            <div class="bg-primary-light rounded-lg shadow-custom p-8">
+                <h3 class="text-2xl font-semibold mb-6 text-accent">Technical Skills</h3>
+                <div class="mb-4">
+                    <h4 class="text-xl font-semibold mb-2 text-accent">Programming Languages</h4>
+                    <ul class="list-disc list-inside text-lg space-y-1">
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>HTML5 &amp; CSS3</li>
+                    </ul>
+                </div>
+                <div class="mb-4">
+                    <h4 class="text-xl font-semibold mb-2 text-accent">Frameworks &amp; Libraries</h4>
+                    <ul class="list-disc list-inside text-lg space-y-1">
+                        <li>Django</li>
+                        <li>Bootstrap</li>
+                        <li>Tailwind CSS</li>
+                        <li>FastAPI</li>
+                    </ul>
+                </div>
+                <div class="mb-4">
+                    <h4 class="text-xl font-semibold mb-2 text-accent">Databases &amp; Tools</h4>
+                    <ul class="list-disc list-inside text-lg space-y-1">
+                        <li>MariaDB &amp; MySQL</li>
+                        <li>SQLite</li>
+                        <li>Docker</li>
+                        <li>Git &amp; GitHub</li>
+                        <li>Pytest</li>
+                        <li>Postman</li>
+                        <li>Jira</li>
+                        <li>Web Browser Dev Tools</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-2 text-accent">API &amp; Backend Skills</h4>
+                    <ul class="list-disc list-inside text-lg space-y-1">
+                        <li>RESTful API Design</li>
+                        <li>Authentication &amp; Permissions</li>
+                        <li>Unit Testing</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Soft Skills Card -->
+            <div class="bg-primary-light rounded-lg shadow-custom p-8">
+                <h3 class="text-2xl font-semibold mb-6 text-accent">Soft Skills</h3>
+                <ul class="list-disc list-inside text-lg space-y-2">
+                    <li>Collaboration</li>
+                    <li>Problem Solving</li>
+                    <li>Accountability</li>
+                    <li>Communication</li>
+                    <li>Analytical Skills</li>
+                    <li>Adaptability</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-section-light">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-primary-dark mb-4">Experience</h2>
+                <div class="w-24 h-1 bg-accent mx-auto"></div>
+            </div>
+
+            <!-- Technical Support Consultant -->
+            <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-custom mb-12 shadow-custom-hover transition-transform">
+                <h3 class="text-2xl font-bold text-primary-dark mb-2">Technical Support Consultant</h3>
+                <p class="text-lg text-gray-600 mb-4">Eazy Costing | August 2024 - Present</p>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <li><span class="font-bold">Efficient Ticket Management:</span> Managed and prioritized an average of 50-70 support tickets weekly, utilizing Jira to track progress and ensure timely resolution of user-reported issues and feature requests.</li>
+                <li><span class="font-bold">Comprehensive Issue Diagnosis &amp; Resolution:</span> Performed in-depth troubleshooting to identify root causes of software bugs and user errors, leading to the independent resolution of 60% of reported issues and a 50% reduction in recurring problems. Collaborated effectively with the development team on complex technical challenges.</li>
+                <li><span class="font-bold">Structured Jira Story Creation:</span> Translated raw user feedback and business needs into well-defined Jira user stories, including detailed acceptance criteria, contributing to the successful development of 10 major features and 20+ minor enhancements and improving clarity for the software development team.</li>
+                <li><span class="font-bold">Knowledge Base Contribution &amp; Development:</span> Developed and maintained comprehensive help documentation and troubleshooting guides within the company's knowledge base, resulting in an increase in self-service resolutions and improved user autonomy.</li>
+                <li><span class="font-bold">Technical Customer Support:</span> Provided direct technical support to 100+ business owners and users, effectively communicating complex technical information in an understandable manner, which contributed to positive customer satisfaction feedback.</li>
+                </ul>
+            </div>
+
+            <!-- Waiter -->
+            <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-custom shadow-custom-hover transition-transform">
+                <h3 class="text-2xl font-bold text-primary-dark mb-2">Waiter</h3>
+                <p class="text-lg text-gray-600 mb-4">Chinook Spur | July 2023 - August 2024</p>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li>Providing excellent waitering service to ensure satisfaction</li>
+                    <li>Taking customer orders and delivering food and beverages</li>
+                    <li>Making menu recommendations, answering questions and sharing additional information with restaurant patrons</li>
+                    <li>Handling payments</li>
+                    <li>Following Health and Safety Regulations</li>
+                    <li>Up-selling and Promoting Specials</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-primary-dark text-neutral-light">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-neutral-light mb-4">My Projects</h2>
+                <div class="w-24 h-1 bg-accent mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- E-commerce Application -->
+                <div class="bg-primary-light rounded-lg shadow-custom overflow-hidden shadow-custom-hover transition-transform">
+                    <div class="h-48 bg-accent flex items-center justify-center">
+                        <i class="fas fa-shopping-cart text-neutral-light text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-neutral-light">E-commerce Application</h3>
+                        <p class="text-gray-400 mb-4">A comprehensive full-stack web platform enabling online buying and selling with distinct buyer and vendor functionalities.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-700 text-neutral-light px-3 py-1 rounded-full text-sm">Django (Python)</span>
+                            <span class="bg-gray-700 text-neutral-light px-3 py-1 rounded-full text-sm">MariaDB</span>
+                            <span class="bg-gray-700 text-neutral-light px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-gray-700 text-neutral-light px-3 py-1 rounded-full text-sm font-semibold">
+                                Full CRUD, Custom Roles, Invoice Gen
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Application -->
+                <div class="bg-primary-light rounded-lg shadow-custom overflow-hidden shadow-custom-hover transition-transform">
+                    <div class="h-48 bg-accent flex items-center justify-center">
+                        <i class="fas fa-newspaper text-neutral-light text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-neutral-light">News Application</h3>
+                        <p class="text-gray-400 mb-4">A web-based news aggregator designed to fetch and display dynamic news content from external APIs with a responsive user interface.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-700 text-neutral-light px-3 py-1 rounded-full text-sm">Django (Python)</span>
+                            <span class="bg-gray-700 text-neutral-light px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                            <span class="bg-gray-700 text-neutral-light px-3 py-1 rounded-full text-sm">External API</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-gray-700 text-neutral-light px-3 py-1 rounded-full text-sm font-semibold">
+                                Dynamic Content, Responsive
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Task Manager Application -->
+                <div class="bg-primary-light rounded-lg shadow-custom overflow-hidden shadow-custom-hover transition-transform">
+                    <div class="h-48 bg-accent flex items-center justify-center">
+                        <i class="fas fa-tasks text-neutral-light text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-neutral-light">Task Manager Application</h3>
+                        <p class="text-gray-400 mb-4">A robust application for managing daily tasks, emphasizing backend logic for task creation, tracking, and completion.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-700 text-neutral-light px-3 py-1 rounded-full text-sm">Python (Backend)</span>
+                            <span class="bg-gray-700 text-neutral-light px-3 py-1 rounded-full text-sm">SQLite</span>
+                            <span class="bg-gray-700 text-neutral-light px-3 py-1 rounded-full text-sm">Pytest</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-gray-700 text-neutral-light px-3 py-1 rounded-full text-sm font-semibold">
+                                Comprehensive CRUD, Unit Tested
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sticky Notes Application -->
+                <div class="bg-primary-light rounded-lg shadow-custom overflow-hidden shadow-custom-hover transition-transform">
+                    <div class="h-48 bg-accent flex items-center justify-center">
+                        <i class="fas fa-sticky-note text-neutral-light text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-neutral-light">Sticky Notes Application</h3>
+                        <p class="text-gray-400 mb-4">A client-side web application for creating, managing, and deleting personal notes, utilizing browser local storage for persistence.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-700 text-neutral-light px-3 py-1 rounded-full text-sm">HTML</span>
+                            <span class="bg-gray-700 text-neutral-light px-3 py-1 rounded-full text-sm">CSS</span>
+                            <span class="bg-gray-700 text-neutral-light px-3 py-1 rounded-full text-sm">JavaScript</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-gray-700 text-neutral-light px-3 py-1 rounded-full text-sm font-semibold">
+                                Client-Side CRUD, Local Storage
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-section-light">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-primary-dark mb-4">Education</h2>
+                <div class="w-24 h-1 bg-accent mx-auto"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-custom shadow-custom-hover transition-transform mb-12">
+                <h3 class="text-2xl font-bold text-primary-dark mb-2">Software Engineering Bootcamp</h3>
+                <p class="text-lg text-gray-600 mb-4">HyperionDev | February 2025 - August 2025</p>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li>The bootcamp aims to introduce and develop Python and Web development knowledge by completing practical activities.</li>
+                    <li>Achieved an overall average of 99% for the bootcamp tasks and ranked 3 out of 177 students.</li>
+                    <li>Mastered Python programming within six months, enhancing coding skills and efficiency in data manipulation and analysis.</li>
+                    <li>Acquired hands-on experience with key libraries, including Flask, Django, and FastAPI.</li>
+                    <li>Successfully completed various real-world projects such as an E-commerce and a Sticky Notes application.</li>
+                </ul>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-custom shadow-custom-hover transition-transform">
+                <h3 class="text-2xl font-bold text-primary-dark mb-2">National Senior Certificate</h3>
+                <p class="text-lg text-gray-600 mb-4">Bloubergrant High School | 2016 - 2020</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accomplishments Section -->
+    <section id="accomplishments" class="py-20 bg-primary-dark text-neutral-light">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-neutral-light mb-4">Key Accomplishments</h2>
+                <div class="w-24 h-1 bg-accent mx-auto"></div>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <ul class="list-disc list-inside text-lg space-y-4">
+                    <li>Designed and implemented 5 end-to-end web applications, demonstrating high proficiency in full Create, Read, Update, Delete (CRUD) operations, secure database management, and scalable API development, resulting in average evaluations above 90% in the bootcamp.</li>
+                    <li>Promoted to Full-time Technical Support Consultant at Eazy Costing after successfully completing probationary and internship phases, reflecting consistent high performance and technical aptitude.</li>
+                    <li>Contributed to significant business transformation, including website redesign and process optimization, and facilitated team growth by onboarding and training new employees at Eazy Costing.</li>
+                    <li>Surpassed sales targets by over 50% within my age group (juniors), notably achieving the highest sales volume for promotional items and signing up over 10 customers for rewards cards at Chinook Spur.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-section-light">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-primary-dark mb-4">Contact Me</h2>
+                <div class="w-24 h-1 bg-accent mx-auto"></div>
+            </div>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 bg-white p-8 rounded-lg shadow-custom">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-primary-dark">Get In Touch</h3>
+                    <div class="space-y-4 text-gray-700">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-accent text-xl w-8"></i>
+                            <span class="ml-4">(083) 793-5476</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-accent text-xl w-8"></i>
+                            <span class="ml-4">kgutlanebuntle@gmail.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-accent text-xl w-8"></i>
+                            <span class="ml-4">Cape Town, Western Cape, 7780</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fab fa-linkedin text-accent text-xl w-8"></i>
+                            <a href="https://www.linkedin.com/in/kgutlane-ralijeje-33690420a/" target="_blank" class="ml-4 hover:underline text-blue-600">LinkedIn Profile</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fab fa-github text-accent text-xl w-8"></i>
+                            <a href="https://github.com/unexpectedlyf" target="_blank" class="ml-4 hover:underline text-blue-600">GitHub Profile</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-globe text-accent text-xl w-8"></i>
+                            <a href="https://www.hyperiondev.com/portfolio/KB25010017263/" target="_blank" class="ml-4 hover:underline text-blue-600">Bootcamp Portfolio</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-link text-accent text-xl w-8"></i>
+                            <a href="https://kgutlanebuntle.wixstudio.com/epikailabs" target="_blank" class="ml-4 hover:underline text-blue-600">Epikai Labs Website</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <form class="space-y-6" id="contact-form">
+                        <div>
+                            <input type="text" placeholder="Your Name" required
+                                   class="w-full p-4 rounded-lg bg-gray-100 border border-gray-300 text-neutral-dark placeholder-gray-500 focus:outline-none focus:border-accent transition-colors">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Your Email" required
+                                   class="w-full p-4 rounded-lg bg-gray-100 border border-gray-300 text-neutral-dark placeholder-gray-500 focus:outline-none focus:border-accent transition-colors">
+                        </div>
+                        <div>
+                            <textarea placeholder="Your Message" rows="5" required
+                                      class="w-full p-4 rounded-lg bg-gray-100 border border-gray-300 text-neutral-dark placeholder-gray-500 focus:outline-none focus:border-accent transition-colors resize-none"></textarea>
+                        </div>
+                        <button type="submit"
+                                class="w-full bg-accent text-neutral-light py-4 rounded-lg font-semibold hover-bg-accent-dark transition-colors shadow-custom">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-dark text-neutral-light py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Kgutlane Ralijeje. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-primary-dark', 'bg-opacity-95', 'backdrop-blur-sm');
+            } else {
+                navbar.classList.remove('bg-opacity-95', 'backdrop-blur-sm');
+            }
+        });
+
+        // Typing animation
+        const typingTexts = [
+            'Junior Software Developer',
+            'Python Developer',
+            'Full-Stack Enthusiast',
+            'Problem Solver'
+        ];
+
+        let textIndex = 0;
+        let charIndex = 0;
+        const typingElement = document.getElementById('typing-text');
+
+        function typeText() {
+            if (charIndex < typingTexts[textIndex].length) {
+                typingElement.textContent += typingTexts[textIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(typeText, 100);
+            } else {
+                setTimeout(eraseText, 2000);
+            }
+        }
+
+        function eraseText() {
+            if (charIndex > 0) {
+                typingElement.textContent = typingTexts[textIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(eraseText, 50);
+            } else {
+                textIndex = (textIndex + 1) % typingTexts.length;
+                setTimeout(typeText, 500);
+            }
+        }
+
+        // Start typing animation
+        setTimeout(typeText, 1000);
+
+        // Contact form submission (using a simple alert as per instructions)
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = this.querySelector('input[type="text"]').value;
+            const email = this.querySelector('input[type="email"]').value;
+            const message = this.querySelector('textarea').value;
+
+            if (name && email && message) {
+                const submitButton = this.querySelector('button[type="submit"]');
+                const originalText = submitButton.textContent;
+
+                submitButton.textContent = 'Sending...';
+                submitButton.disabled = true;
+
+                // Simulate form submission
+                setTimeout(() => {
+                    alert('Thank you for your message! I\'ll get back to you soon.');
+                    this.reset();
+                    submitButton.textContent = originalText;
+                    submitButton.disabled = false;
+                }, 1500);
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                    // Stop observing once animated
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe sections for animations
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
